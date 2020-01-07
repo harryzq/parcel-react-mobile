@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",                       /* Base directory to resolve non-absolute module names. */
+    
+    "baseUrl": ".",                       /* Base directory to resolve non-absolute module names. */
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["src/*"],
+      "assets/*":["src/assets/*"],
+      "pages/*": ["src/pages/*"],
     },  
     "target": "es5",
     "lib": [
@@ -11,6 +14,8 @@
       "esnext"
     ],
     "allowJs": true,
+    "experimentalDecorators": true,
+    "declaration":true, //生成对应的 .d.ts 文件
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -24,6 +29,9 @@
     "jsx": "react"
   },
   "include": [
-    "src", "App.tsx"
+    "src", "App.tsx","requirements.d.ts",
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

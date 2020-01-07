@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 
+import './src/assets/scss/index.scss'
 // MobX
 import { Provider } from "mobx-react"
 import * as stores from './src/mobx/store'
@@ -10,12 +11,12 @@ import Layout from "./src/pages/Layout";
 
 function App() {
   return (
-    <div id='app'>
+    <Fragment>
       <Provider {...stores}>
-      <Layout></Layout>
-    </Provider>
-    </div>
-    
+        <Layout></Layout>
+      </Provider>
+    </Fragment>
+
   );
 }
 

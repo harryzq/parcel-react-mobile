@@ -3,10 +3,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  HashHistory,
   Link
 } from "react-router-dom";
-import Home from "../User";
+import loadable from '@loadable/component'
+
+const User = loadable(() => import('../User'))
 
 export default class App extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class App extends Component {
             </ul>
             <Switch>
               <Route path="/Home">
-                <Home />
+                <User></User>
               </Route>
             </Switch>
           </div>
